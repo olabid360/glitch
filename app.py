@@ -14,6 +14,10 @@ app.config['MAIL_USE_SSL'] = True
 
 mail = Mail(app)
 
+@app.route("/")
+def index():
+    return "here we are"
+
 @app.route("/default/<name>/<password>")
 def default(name, password):
 
